@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbMainFormRoot" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.ivkhkdev.nptv23javafx.controller.MainFormController">
+   <children>
+      <Label fx:id="lbInfo" alignment="CENTER" prefHeight="17.0" prefWidth="639.0" textFill="#5e9a50" />
+      <TableView fx:id="tvListBooks" prefHeight="426.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="47.0" text="Id" />
+          <TableColumn fx:id="tcTitle" prefWidth="193.99998474121094" text="Название книги" />
+          <TableColumn fx:id="tcAuthors" prefWidth="83.66665649414062" text="Авторы" />
+          <TableColumn fx:id="tcPublicationYear" prefWidth="92.66665649414062" text="Год издания" />
+            <TableColumn fx:id="tcQuantity" prefWidth="90.0" text="Количество" />
+          <TableColumn fx:id="tcCount" prefWidth="90.66665649414062" text="В наличии" />
+        </columns>
+      </TableView>
+      <HBox fx:id="hbEditBook" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="600.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" onAction="#showEditBookForm" text="Редактировать книгу" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

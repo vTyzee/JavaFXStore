@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbMenuFormRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.ivkhkdev.nptv23javafx.controller.MenuFormController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="mBooks" mnemonicParsing="false" text="Книги">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showBookForm" text="Добавить книгу" />
+                <MenuItem mnemonicParsing="false" onAction="#showAuthorForm" text="Добавить автора" />
+                  <MenuItem mnemonicParsing="false" onAction="#showListAuthorsForm" text="Список авторов" />
+                  <MenuItem mnemonicParsing="false" onAction="#showTakedBookForm" text="Списов выданных книг" />
+            </items>
+          </Menu>
+          <Menu fx:id="mUsers" mnemonicParsing="false" text="Пользователь">
+            <items>
+                <MenuItem fx:id="miEnter" mnemonicParsing="false" onAction="#showLoginForm" text="Вход" />
+                <MenuItem fx:id="miLogout" mnemonicParsing="false" onAction="#logout" text="Выход" />
+                <MenuItem fx:id="miProfile" mnemonicParsing="false" onAction="#showProfileForm" text="Профиль" />
+            </items>
+          </Menu>
+          <Menu fx:id="mAdmin" mnemonicParsing="false" text="Administrator" />
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>

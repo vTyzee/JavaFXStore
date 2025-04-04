@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="vbSelectedBookRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.ivkhkdev.nptv23javafx.controller.SelectedBookFromModalityController">
+   <children>
+      <ImageView fx:id="ivCoverBook" fitHeight="320.0" fitWidth="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/Voina_i_mir.PNG" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Button fx:id="btTakeOnBook" mnemonicParsing="false" onAction="#takeOnBook" text="Читать книгу" />
+            <Button fx:id="btReturnBook" mnemonicParsing="false" onAction="#returnBook" text="Вернуть книгу" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
