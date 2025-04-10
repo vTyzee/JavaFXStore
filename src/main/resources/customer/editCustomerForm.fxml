@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.EditCustomerFormController"
+      spacing="10"
+      style="-fx-padding: 10;">
+
+    <Label text="Редактировать покупателя" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="tfName" promptText="Имя покупателя"/>
+    <TextField fx:id="tfEmail" promptText="Email"/>
+    <TextField fx:id="tfPhoneNumber" promptText="Телефон"/>
+    <TextField fx:id="tfAddress" promptText="Адрес"/>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <padding>
+            <Insets top="5" right="15" bottom="5" left="15"/>
+        </padding>
+        <Button text="Сохранить" onAction="#saveCustomer"/>
+        <Button text="Отмена" onAction="#cancel"/>
+    </HBox>
+
+</VBox>

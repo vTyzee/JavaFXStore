@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="vbMainFormRoot" prefHeight="500.0" prefWidth="800.0"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.MainFormController"
+      style="-fx-background-color: #f7f9fc; -fx-padding: 20;">
+
+    <!-- Заголовок -->
+    <Label text="Список заказов" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <!-- Контейнер для меню -->
+    <VBox fx:id="menuContainer" />
+
+    <!-- Таблица заказов -->
+    <TableView fx:id="tvOrderList" prefHeight="380.0" prefWidth="780.0"
+               style="-fx-background-color: white; -fx-border-color: #dcdcdc; -fx-border-radius: 5;">
+        <columns>
+            <TableColumn fx:id="tcId" prefWidth="50.0" text="ID"/>
+            <TableColumn fx:id="tcCustomer" prefWidth="200.0" text="Покупатель"/>
+            <TableColumn fx:id="tcOrderDate" prefWidth="150.0" text="Дата заказа"/>
+            <TableColumn fx:id="tcProducts" prefWidth="220.0" text="Товары"/>
+            <TableColumn fx:id="tcTotalAmount" prefWidth="130.0" text="Сумма"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT" spacing="15"
+          style="-fx-padding: 10; -fx-background-color: #e3e7ed; -fx-border-radius: 5;">
+        <padding>
+            <Insets top="10" right="20" bottom="10" left="20"/>
+        </padding>
+
+    </HBox>
+
+</VBox>

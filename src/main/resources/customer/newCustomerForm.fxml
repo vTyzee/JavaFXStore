@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.NewCustomerFormController"
+      spacing="10"
+      style="-fx-padding: 10;">
+
+    <Label text="Добавить нового покупателя" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="tfName" promptText="Имя"/>
+    <TextField fx:id="tfEmail" promptText="Email"/>
+    <TextField fx:id="tfPhoneNumber" promptText="Номер телефона"/>
+    <TextField fx:id="tfAddress" promptText="Адрес"/>
+
+    <Button text="Сохранить" onAction="#saveCustomer"/>
+</VBox>

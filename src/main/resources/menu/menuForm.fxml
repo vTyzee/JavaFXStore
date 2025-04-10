@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.MenuFormController">
+    <MenuBar>
+        <menus>
+            <Menu fx:id="mProducts" text="Товары">
+                <items>
+                    <MenuItem fx:id="miAddProduct" onAction="#showNewProductForm" text="Добавить товар" />
+                    <MenuItem fx:id="miProductList" onAction="#showProductListForm" text="Список товаров" />
+                </items>
+            </Menu>
+
+            <Menu fx:id="mOrders" text="Заказы">
+                <items>
+                    <MenuItem fx:id="miAddOrder" onAction="#showNewOrderForm" text="Создать заказ" />
+                </items>
+            </Menu>
+
+            <Menu fx:id="mCustomers" text="Покупатели">
+                <items>
+                    <MenuItem fx:id="miAddCustomer" onAction="#showNewCustomerForm" text="Добавить покупателя" />
+                    <MenuItem fx:id="miCustomerList" onAction="#showCustomerListForm" text="Список покупателей" />
+                </items>
+            </Menu>
+
+            <Menu fx:id="mAdmin" text="Администратор">
+                <items>
+                    <MenuItem text="Управление пользователями" onAction="#showUserManagementForm"/>
+                </items>
+            </Menu>
+
+            <!-- Новое меню "Просмотр" -->
+            <Menu fx:id="mView" text="Просмотр">
+                <items>
+                    <MenuItem text="Просмотр отчетов" onAction="#showReports"/>
+                </items>
+            </Menu>
+
+            <Menu text="Выход">
+                <items>
+                    <MenuItem onAction="#logout" text="Выход" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</VBox>

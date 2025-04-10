@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.EditProductFormController"
+      spacing="10"
+      style="-fx-padding: 10;">
+
+    <Label text="Редактирование товара" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <!-- Поля -->
+    <TextField fx:id="tfName" promptText="Название"/>
+    <TextField fx:id="tfCategory" promptText="Категория"/>
+    <TextField fx:id="tfPrice" promptText="Цена"/>
+    <TextField fx:id="tfQuantity" promptText="Количество"/>
+
+    <!-- Изображение + кнопка -->
+    <ImageView fx:id="productImageView" fitWidth="150" fitHeight="150" preserveRatio="true"/>
+    <Button text="Выбрать изображение" onAction="#chooseImage"/>
+
+    <!-- Управление -->
+    <HBox spacing="10">
+        <Button text="Сохранить" onAction="#saveProduct"/>
+        <Button text="Отмена" onAction="#cancel"/>
+    </HBox>
+</VBox>

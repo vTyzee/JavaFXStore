@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.GrocceryShop.controller.ModalProductDetailsFormController"
+      spacing="10" alignment="CENTER" prefWidth="400" prefHeight="250"
+      style="-fx-background-color: #FFFFFF; -fx-padding: 20;">
+
+    <Label fx:id="lblProductName" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Название товара" />
+
+    <Label fx:id="lblCategory" text="Категория: ..." />
+
+    <Label fx:id="lblPrice" text="Цена: 0.0" />
+
+    <Label fx:id="lblAvailableQuantity" text="В наличии: 0" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Количество:"/>
+        <TextField fx:id="tfQuantityToBuy" text="1" prefWidth="60"/>
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="btnBuy" text="Купить" />
+        <Button fx:id="btnCancel" text="Отмена" />
+    </HBox>
+</VBox>

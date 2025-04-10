@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.NewOrderFormController"
+
+      spacing="10"
+      style="-fx-padding: 15;">
+
+    <Label text="Создание нового заказа" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <Label text="Выберите покупателя:"/>
+    <ComboBox fx:id="cbCustomers" promptText="Выберите покупателя"/>
+
+    <Label text="Выберите продукт:"/>
+    <ComboBox fx:id="cbProducts" promptText="Выберите продукт"/>
+
+    <Label text="Количество:"/>
+    <TextField fx:id="tfQuantity" promptText="Введите количество"/>
+
+    <Button text="Создать заказ" onAction="#createOrder" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    <Button text="Назад" onAction="#goBackToMainForm" />
+
+</VBox>

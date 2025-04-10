@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.GrocceryShop.controller.ProfileFormController"
+      spacing="15"
+      style="
+          -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f2f5);
+          -fx-padding: 20;
+          -fx-font-family: 'Segoe UI';
+          -fx-font-size: 14;
+          -fx-border-color: #ccc;
+          -fx-border-width: 1;
+          -fx-border-radius: 8;
+          -fx-background-radius: 8;
+          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 2, 2);
+      ">
+
+    <!-- Заголовок -->
+    <Label text="Мой профиль"
+           style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <!-- Логин -->
+    <TextField fx:id="tfUsername" promptText="Логин"
+               style="-fx-background-color: #fff;
+                      -fx-border-color: #ddd;
+                      -fx-border-radius: 5;
+                      -fx-background-radius: 5;
+                      -fx-padding: 8;" />
+
+    <!-- Пароль -->
+    <PasswordField fx:id="pfPassword" promptText="Пароль"
+                   style="-fx-background-color: #fff;
+                          -fx-border-color: #ddd;
+                          -fx-border-radius: 5;
+                          -fx-background-radius: 5;
+                          -fx-padding: 8;" />
+
+    <!-- Имя -->
+    <TextField fx:id="tfFirstName" promptText="Имя"
+               style="-fx-background-color: #fff;
+                      -fx-border-color: #ddd;
+                      -fx-border-radius: 5;
+                      -fx-background-radius: 5;
+                      -fx-padding: 8;" />
+
+    <!-- Фамилия -->
+    <TextField fx:id="tfLastName" promptText="Фамилия"
+               style="-fx-background-color: #fff;
+                      -fx-border-color: #ddd;
+                      -fx-border-radius: 5;
+                      -fx-background-radius: 5;
+                      -fx-padding: 8;" />
+
+    <!-- Кнопки "Сохранить" и "Отмена" -->
+    <HBox spacing="10" style="-fx-alignment: center-right;">
+        <Button text="Сохранить"
+                onAction="#saveProfile"
+                style="-fx-background-color: #3498db;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 5;
+                       -fx-padding: 6 16;" />
+        <Button text="Отмена"
+                onAction="#cancel"
+                style="-fx-background-color: #e74c3c;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 5;
+                       -fx-padding: 6 16;" />
+    </HBox>
+</VBox>

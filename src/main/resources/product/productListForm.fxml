@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.GrocceryShop.controller.ProductListFormController"
+      spacing="10"
+      style="-fx-padding: 10;">
+
+    <TableView fx:id="tvProducts" prefHeight="400" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="tcId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="tcName" text="Название" prefWidth="200"/>
+            <TableColumn fx:id="tcCategory" text="Категория" prefWidth="150"/>
+            <TableColumn fx:id="tcPrice" text="Цена" prefWidth="100"/>
+            <TableColumn fx:id="tcQuantity" text="Количество" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Обновить" onAction="#loadProducts"/>
+        <Button fx:id="btnEditProduct" text="Редактировать" onAction="#editSelectedProduct"/>
+        <Button text="Назад" onAction="#goBackToMainForm" style="-fx-background-color: #d9534f; -fx-text-fill: white;"/>
+    </HBox>
+
+</VBox>
