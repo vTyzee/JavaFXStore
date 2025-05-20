@@ -1,0 +1,26 @@
+<!-- supplier/supplierList.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbSupplierListRoot"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.SupplierListController"
+      spacing="10" stylesheets="@../css/theme.css" style="-fx-padding:10;">
+    <TableView fx:id="tvSupplierList" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="tcId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="tcName" text="Название" prefWidth="200"/>
+            <TableColumn fx:id="tcContact" text="Контакт" prefWidth="200"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="Редактировать" onAction="#editSelectedSupplier"/>
+        <Button text="Удалить" onAction="#deleteSelectedSupplier"/>
+        <Button text="Главная" onAction="#goToMainForm"/>
+    </HBox>
+</VBox>

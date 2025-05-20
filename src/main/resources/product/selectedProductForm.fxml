@@ -1,0 +1,16 @@
+<!-- product/selectedProductForm.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.SelectedProductFormController"
+      spacing="10" stylesheets="@../css/theme.css" style="-fx-padding:20;">
+    <Label text="Информация о продукте" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+    <Label text="Название:"/><Label fx:id="nameLabel"/>
+    <Label text="Поставщики:"/><Label fx:id="suppliersLabel"/>
+    <Label text="Цена:"/><Label fx:id="priceLabel"/>
+    <Label text="Количество:"/><Label fx:id="quantityLabel"/>
+    <Label text="В наличии:"/><Label fx:id="stockLabel"/>
+</VBox>

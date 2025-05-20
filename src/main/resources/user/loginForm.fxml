@@ -1,0 +1,24 @@
+<!-- user/loginForm.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.LoginFormController"
+      spacing="10" stylesheets="@../css/theme.css" style="-fx-padding:30;">
+    <Label text="Введите логин и пароль" style="-fx-font-size:22;"/>
+    <Label fx:id="lbInfo"/>
+    <VBox styleClass="border">
+        <HBox spacing="5"><Label text="Логин"/><TextField fx:id="tfUsername"/></HBox>
+        <HBox spacing="5"><Label text="Пароль"/><PasswordField fx:id="pfPassword"/></HBox>
+        <HBox spacing="5"><Label/><Button text="Войти" onAction="#login"/></HBox>
+    </VBox>
+    <Label text="Нет аккаунта? Зарегистрируйтесь!" textFill="#2196F3" style="-fx-cursor:hand;" onMouseClicked="#showRegistrationForm"/>
+</VBox>

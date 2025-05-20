@@ -1,0 +1,11 @@
+/* theme.css */
+.root {
+    -fx-background-color: white;
+}
+.label {
+    -fx-text-fill: #2196F3;
+}
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}

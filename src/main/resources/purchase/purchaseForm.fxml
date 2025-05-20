@@ -1,0 +1,27 @@
+<!-- purchase/purchaseForm.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.PurchaseFormController"
+      spacing="10" stylesheets="@../css/theme.css" style="-fx-padding:20;">
+    <Label text="Покупка продукта" style="-fx-font-size:18;"/>
+    <GridPane hgap="10" vgap="10">
+        <Label text="Покупатель:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cbCustomer" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Продукт:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cbProduct" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Количество:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="tfQuantity" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Button text="Купить" onAction="#handlePurchase"/>
+    <Button text="Главная" onAction="#goToMainForm"/>
+    <Label fx:id="lblPurchaseResult"/>
+</VBox>

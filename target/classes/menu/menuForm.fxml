@@ -1,0 +1,51 @@
+<!-- menu/menuForm.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbMenuFormRoot"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.MenuFormController"
+      stylesheets="@../css/theme.css" style="-fx-padding:0;">
+    <MenuBar>
+        <Menu text="Продукты" fx:id="menuProducts">
+            <items>
+                <MenuItem text="Добавить продукт" onAction="#showProductForm"/>
+                <MenuItem text="Список продуктов" onAction="#showProductList"/>
+            </items>
+        </Menu>
+        <Menu text="Поставщики" fx:id="menuSuppliers">
+            <items>
+                <MenuItem text="Добавить поставщика" onAction="#showSupplierForm"/>
+                <MenuItem text="Список поставщиков" onAction="#showSupplierList"/>
+            </items>
+        </Menu>
+        <Menu text="Покупатели" fx:id="menuCustomers">
+            <items>
+                <MenuItem text="Добавить покупателя" onAction="#showNewCustomerForm"/>
+                <MenuItem text="Список покупателей" onAction="#showCustomerListForm"/>
+            </items>
+        </Menu>
+        <Menu text="Покупка">
+            <items>
+                <MenuItem text="Купить продукт" onAction="#showPurchaseForm"/>
+                <MenuItem text="Доход магазина" onAction="#showIncomeForm"/>
+                <MenuItem text="Рейтинг продуктов" onAction="#showRatingForm"/>
+            </items>
+        </Menu>
+        <Menu text="Administrator" fx:id="menuAdministrator"/>
+        <Menu text="Пользователь">
+            <items>
+                <MenuItem text="Изменить пароль" onAction="#showChangePasswordForm"/>
+                <MenuItem text="Выход" onAction="#logout"/>
+                <MenuItem text="Войти" onAction="#showLoginForm"/>
+                <MenuItem text="Чат" onAction="#showChatForm"/>
+            </items>
+        </Menu>
+    </MenuBar>
+    <Label/>
+</VBox>
