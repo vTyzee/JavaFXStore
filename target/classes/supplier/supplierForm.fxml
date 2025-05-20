@@ -1,0 +1,20 @@
+<!-- supplier/supplierForm.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.grocerystore.controller.SupplierFormController"
+      spacing="10" stylesheets="@../css/theme.css" style="-fx-padding:20;">
+    <Label text="Новый поставщик" style="-fx-font-size:18;"/>
+    <HBox spacing="10"><Label text="Название:"/><TextField fx:id="tfName"/></HBox>
+    <HBox spacing="10"><Label text="Контакт:"/><TextField fx:id="tfContact"/></HBox>
+    <HBox spacing="10">
+        <Button text="Добавить" onAction="#create"/>
+        <Button text="Главная" onAction="#goToMainForm"/>
+    </HBox>
+</VBox>
